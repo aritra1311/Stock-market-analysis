@@ -116,6 +116,7 @@ For support, email [adityapravasen.0911@gmail.com](mailto:adityapravasen.0911@gm
   
 ## Roadmap
 
+![Roadmap](https://github.com/aritra1311/Stock-market-analysis/blob/main/images/ss5.png)
 
 
   
