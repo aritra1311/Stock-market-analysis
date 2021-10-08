@@ -12,7 +12,7 @@ The app has 3 main functionalities-
 
 ## 1. Stock/Crypto Data Analysis-
 > This function helps to analyze a particular stock or cryptocoin by providing an interactive candlestick chart with *3 moving averages* and a buy or sell indication marker if there are chances of the stock to rise or fall.
-![^NSEI Data screenshot](ss1.png)
+![^NSEI Data screenshot](https://github.com/aritra1311/Stock-market-analysis/blob/main/images/ss1.png)
 
 
 ## 2. Stock Selection Automation-
@@ -22,18 +22,18 @@ These Automation functions are meant for *swing trading* strategies.
 ### 2.1 44-Day MA Trade Automation-
 > This function automates the *Swing trade* stock selection strategy *green candle near rising 44-day moving average* and gives the user a dataset on entry-price, stoploss and target.
 sample output for top *25 NSE Stocks accoring to market cap*-
-![44day ma automation](ss2.png)
+![44day ma automation](https://github.com/aritra1311/Stock-market-analysis/blob/main/images/ss2.png)
 
 ### 2.2 MACD+RSI Trade Automation-
 > This function automates the stock selection strategy for trading based on [MACD](https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/macd) and [RSI](https://www.investopedia.com/terms/r/rsi.asp) Values.
 sample output for top *25 NSE Stocks accoring to market cap*-
-![macd+rsi automation](ss3.png)
+![macd+rsi automation](https://github.com/aritra1311/Stock-market-analysis/blob/main/images/ss3.png)
 
 
 ## 3. Stock/Crypto Price Prediction(BETA)-
 This function anazyles a stock/crypo data over a month and predicts the price for a day of the month, given by the use. The function uses the [SVR](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html) model to predict the future prices.
 sample output for *TCS.NS Stock*-
-![sample prediction](ss4.png)
+![sample prediction](https://github.com/aritra1311/Stock-market-analysis/blob/main/images/ss4.png)
 
 ## Badges
 
@@ -115,7 +115,7 @@ To deploy this project install [Streamlit](https://streamlit.io/)
   
 ## Support
 
-For support, email [adityapravasen.0911@gmail.com](mailto:adityapravasen.0911@gmail.com) or join our Slack channel.
+For support, email [adityapravasen.0911@gmail.com](mailto:adityapravasen.0911@gmail.com) .
 
   
 ## Roadmap
