@@ -1,5 +1,10 @@
 # TRADE AUTOMATOR
 
+## Badges
+
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+
+
 Trade Automator is an app that automates stock selection based on some *selection strategies*, lets you *analyze stock data* and and even uses machine learning(BETA) to *predict stock prices* for a given date of the month.
 
 The app has 3 main functionalities-
@@ -34,15 +39,6 @@ sample output for top *25 NSE Stocks accoring to market cap*-
 This function anazyles a stock/crypo data over a month and predicts the price for a day of the month, given by the use. The function uses the [SVR](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVR.html) model to predict the future prices.
 sample output for *TCS.NS Stock*-
 ![sample prediction](https://github.com/aritra1311/Stock-market-analysis/blob/main/images/ss4.png)
-
-## Badges
-
-Add badges from somewhere like: [shields.io](https://shields.io/)
-
-[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
-
   
 ## License
 
