@@ -17,7 +17,8 @@ The app has 3 main functionalities-
 
 ## 1. Stock/Crypto Data Analysis-
 > This function helps to analyze a particular stock or cryptocoin by providing an interactive candlestick chart with *3 moving averages* and a buy or sell indication marker if there are chances of the stock to rise or fall.
-![^NSEI Data screenshot](https://github.com/aritra1311/Stock-market-analysis/blob/main/images/ss1.png)
+
+![NSEI Data screenshot](https://github.com/aritra1311/Stock-market-analysis/blob/main/images/ss1.png)
 
 
 ## 2. Stock Selection Automation-
