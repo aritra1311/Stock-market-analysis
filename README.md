@@ -5,7 +5,7 @@
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
 
-Trade Automator is an app that automates stock selection based on some *selection strategies*, lets you *analyze stock data* and and even uses machine learning(BETA) to *predict stock prices* for a given date of the month.
+Trade Automator is an app that automates stock selection based on some *selection strategies*, lets you *analyze stock data* and even uses machine learning(BETA) to *predict stock prices* for a given date of the month.
 
 The app has 3 main functionalities-
 *   **Stock/Crypto Data Analysis**
