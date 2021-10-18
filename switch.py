@@ -45,4 +45,4 @@ st.markdown('Any opinions, chats, messages, news, research, analyses, prices, or
 st.markdown('We do not recommend the use of technical analysis as a sole means of trading decisions. We do not recommend making hurried trading decisions. You should always understand that PAST PERFORMANCE IS NOT NECESSARILY INDICATIVE OF FUTURE RESULTS.')
 st.markdown('***')
 st.markdown(
-    'Made with pride and caffaine by  [Adityaprava Sen](https://github.com/AdityapravaSen)  &  [Aritra Basu](https://github.com/aritra1311)')
+    'Developed with pride and caffaine by  [Adityaprava Sen](https://github.com/AdityapravaSen)  &  [Aritra Basu](https://github.com/aritra1311)')
