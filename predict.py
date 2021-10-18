@@ -1,4 +1,5 @@
 # <-- modules -->
+from numpy.core.fromnumeric import mean
 import streamlit as st
 import datetime as dt
 
@@ -91,7 +92,14 @@ def app4():
 
         # show the predicted price for a given date
         day = [[d]]
-        st.write(f'The RBF SVR Predicted price is {rbf_svr.predict(day)}')
-        st.write(f'The Linear SVR Predicted price is {lin_svr.predict(day)}')
+        rbf_pred = rbf_svr.predict(day)[0]
+        lin_pred = lin_svr.predict(day)[0]
+        poly_pred = poly_svr.predict(day)[0]
+
+        avg_pred = (rbf_pred+lin_pred+poly_pred)/3
+
+        st.write(f'Mean Predicted Price for day {d} is {round(avg_pred,2)}')
+        st.write(f'Last Closing Price is {round(df.Close[len(df)-1],2)}')
+        price_change = ((df.Close[len(df)-1]-avg_pred)/df.Close[len(df)-1])*100
         st.write(
-            f'The Polynomial SVR Predicted price is {poly_svr.predict(day)}')
+            f'Expected Price change for day {d} is {round(price_change,2)}%')
