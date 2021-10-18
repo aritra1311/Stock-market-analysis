@@ -152,11 +152,14 @@ def app1():
             title="Trading View",
             yaxis_title="Price",
             xaxis_title="Date",
-            template="plotly_dark"
+            template="plotly_dark",
+            autosize=False,
+            width=1100,
+            height=600
         )
-        figure.show()
+        # figure.show()
 
-        # st.plotly_chart(figure)
+        st.plotly_chart(figure)
 
     st.text("")
     st.text("")
