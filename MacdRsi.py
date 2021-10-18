@@ -1,27 +1,11 @@
-import main
-import price
-import MacdRsi
+# <-- modules -->
 import streamlit as st
-import datetime as dt
-
-import matplotlib.pyplot as plt
-from matplotlib import style
 import pandas as pd
 import numpy as np
-
 import yfinance as yf
 
 
-import plotly.graph_objects as go
-import plotly.subplots as ms
-
-from sklearn.svm import SVR
-
-style.use('ggplot')  # matplotib style
-
-
 def app3():
-    st.markdown("MacdRsiTradeAutomation")
     # List Of Top 500 NSE companies by Market Cap
     ticker_list = ['RELIANCE.NS',
                    'TCS.NS',
@@ -523,6 +507,19 @@ def app3():
                    'ITDC.NS',
                    'APARINDS.NS']
 
+    st.header('Stock Selection Automation-')
+    st.markdown(
+        'These Automation functions are meant for *[swing trading](https://www.investopedia.com/trading/introduction-to-swing-trading/)* strategies.')
+
+    st.subheader('MACD + RSI Trade Automation')
+    st.markdown(
+        '> This function automates the stock selection strategy for trading based on [MACD](https://www.fidelity.com/learning-center/trading-investing/technical-analysis/technical-indicator-guide/macd) and [RSI](https://www.investopedia.com/terms/r/rsi.asp) Values.')
+
+    st.text('')
+    st.text('')
+    st.text('')
+    st.markdown('NOTE: This Feature is only applicable for **NSE** Stocks.')
+
     def add_macd_and_rsi(df, stock_list):
         # calculate macf and signal line indicators
         for stock in stock_list:
@@ -612,17 +609,21 @@ def app3():
         if timeframe in timeSpan:
             p = '1mo'
         else:
-            p = 'max'
+            p = '2y'
         df = yf.download(stock_list, interval=timeframe,
                          period=p, group_by='tickers')
         df.dropna(inplace=True)
         df.index = pd.to_datetime(df.index)
         return df
-    x = st.sidebar.slider("Enter no. of Stocks you want to analyze?", 1, 500)
-    timeframe1 = ['1m', '2m', '5m', '15m', '30m', '60m',
+
+    st.sidebar.markdown(
+        'The range of stocks is set according to market-capital(2021)')
+    x = st.sidebar.slider("Enter no. of Stocks you want to analyze?", 2, 200)
+    timeframes = ['1m', '2m', '5m', '15m', '30m', '60m',
                   '90m', '1h', '1d', '5d', '1wk', '1mo', '3mo']
-    timeframe = st.sidebar.selectbox("Select Timeframe", timeframe1)
-    if st.button("MacdRsi Trade"):
+    timeframe = st.sidebar.selectbox("Select Timeframe", timeframes, index=3)
+
+    if st.button("Automate Macd+Rsi Trade"):
         stock_list = getStockList(x)
         df = getMultipleStockData(stock_list, timeframe)
         df = add_macd_and_rsi(df, stock_list)
@@ -657,4 +658,6 @@ def app3():
 
         trade_df = pd.DataFrame(list(zip(ticker_names, entry_prices, stop_losses, targets)),
                                 columns=['Ticker Name', 'Entry Price', 'Stop Loss', 'Target'])
+
+        st.markdown('List of Stocks-')
         st.write(trade_df)
