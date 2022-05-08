@@ -23,7 +23,7 @@ The app has 3 main functionalities-
 
 ## 2. Stock Selection Automation-
 These Automation functions are meant for *swing trading* strategies.
-![Swing Trade Pic](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a03a27a8-ca05-4986-897a-6433933cb717/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20211008%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20211008T094657Z&X-Amz-Expires=86400&X-Amz-Signature=1f2a0334c6e2ab3a49a049eb9e721df4a1d0f92be8a473743fa04b87bcd1cbd3&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22)
+![Swing Trade Pic](https://github.com/aritra1311/Stock-market-analysis/blob/main/images/ss2.png)
 
 ### 2.1 44-Day MA Trade Automation-
 > This function automates the *Swing trade* stock selection strategy *green candle near rising 44-day moving average* and gives the user a dataset on entry-price, stoploss and target.
