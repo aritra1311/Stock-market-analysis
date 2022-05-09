@@ -594,25 +594,28 @@ def app2():
         for stock in stock_list:
             entry = False
             for i in range(n-3, n):
-                if(df[stock, 'Green_Candlestick'][i] == 1 and (df[stock, '44ma'][n-1]-df[stock, '44ma'][n-3]) > 0 and (df[stock, '44ma'][i] >= df[stock, 'Low'][i] and df[stock, '44ma'][i] <= df[stock, 'High'][i])):
-                    entry = True
-                    break
-            if(entry):
-                ticker_names.append(stock)
-                entry_prices.append(df[stock, 'Close'][n-1])
+                try:
+                    if(df[stock, 'Green_Candlestick'][i] == 1 and (df[stock, '44ma'][n-1]-df[stock, '44ma'][n-3]) > 0 and (df[stock, '44ma'][i] >= df[stock, 'Low'][i] and df[stock, '44ma'][i] <= df[stock, 'High'][i])):
+                        entry = True
+                        break
+                    if(entry):
+                        ticker_names.append(stock)
+                        entry_prices.append(df[stock, 'Close'][n-1])
 
-                stop_loss = min(df[stock, 'Low'][n-2], df[stock, 'Low'][n-3])
-                stop_losses.append(stop_loss)
+                        stop_loss = min(df[stock, 'Low'][n-2], df[stock, 'Low'][n-3])
+                        stop_losses.append(stop_loss)
 
-                difference = df[stock, 'Close'][n-1]-stop_loss
+                        difference = df[stock, 'Close'][n-1]-stop_loss
 
-                target = df[stock, 'Close'][n-1] + (2*difference)
-                targets.append(target)
+                        target = df[stock, 'Close'][n-1] + (2*difference)
+                        targets.append(target)
 
-                risks.append(risk)
+                        risks.append(risk)
 
-                quantity = round(risk/difference)
-                quantities.append(quantity)
+                        quantity = round(risk/difference)
+                        quantities.append(quantity)
+                except:
+                    continue
 
         trade_df = pd.DataFrame(list(zip(ticker_names, entry_prices, stop_losses, risks, quantities, targets)),
                                 columns=['Ticker Name', 'Entry Price', 'Stop Loss', 'Risk', 'Quantity', 'Target'])
