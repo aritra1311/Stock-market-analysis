@@ -611,8 +611,12 @@ def app2():
                         targets.append(target)
 
                         risks.append(risk)
-
-                        quantity = round(risk/difference)
+                        
+                        try:
+                            quantity = round(risk/difference)
+                        except:
+                            quantity=1
+                            
                         quantities.append(quantity)
                 except:
                     continue
