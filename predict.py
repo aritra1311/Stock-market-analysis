@@ -55,7 +55,7 @@ def app4():
         'NOTE: Please Enter **Ticker Name** according to [Yahoo Finance](https://finance.yahoo.com/) Symbols.')
     st.markdown('Add  ```.NS```  for NSE Stocks and  ```.BS```  for BSE Stocks')
     stockName = st.text_input("Enter Stock/Cryptocurrency Name:")
-    d = st.sidebar.slider("Select the day of the month:", 1, 31)
+    d = st.sidebar.slider("Select the day of the month:", min_value=1, max_value=31,value=dt.datetime.now().strftime("%d")+1)
 
     if st.button("Predict Stock/Crypto Prices"):
         # start and and date
